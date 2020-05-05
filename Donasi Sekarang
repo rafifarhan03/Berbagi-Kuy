@@ -1,0 +1,38 @@
+Fitur dalam donasi sekarang
+...
+Login-------
+...
+(belom ada) Sign Up -------- (Isi Form)
+...
+(ketika sudah login)
+
+  Main Fitur (Optional)
+  
+  (Berbentuk Form)
+  ...
+  Masukan Jumlah Ingin diberi..
+  ...
+  Pilih (enum) 
+  1. Sedekah
+  2. Zakat
+  3. Infaq
+  
+  Pilih Metode pembayaran(enum)
+  1. GoPay    (081212345678)
+  2. OVO      (081212345678)
+  3. Dana     (081212345678) 
+  4. PayKuy   (081212345678)
+  5. Transfer (9845-2324-5435-1243 a.n aris bank kuy syariah)
+  ..
+  (Sudah di Submit)
+  ..
+  ..
+  "Jazakallahu Khairan Katsiran"
+  ..
+  ..
+  (balik ke menu awal)
+  
+  
+  
+  
+  
