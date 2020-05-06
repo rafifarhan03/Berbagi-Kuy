@@ -8,7 +8,10 @@ This App is developed by Java Language Programmaing with OOP Concept, GUI, and u
 
 The main feature of this app are :
 
-Donasi Sekarang
-Daftar Donatur
-FAQ
-News
+    1. Donasi Sekarang
+
+    2. Daftar Donatur
+
+    3. FAQ
+  
+    4. News
