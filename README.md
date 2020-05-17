@@ -14,4 +14,3 @@ The main feature of this app are :
 
     3. FAQ
   
-    4. News
