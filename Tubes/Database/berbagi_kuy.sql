@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2020 at 12:11 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Waktu pembuatan: 18 Bulan Mei 2020 pada 11.55
+-- Versi server: 10.4.11-MariaDB
+-- Versi PHP: 7.4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,52 +24,45 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `akun`
---
-
-CREATE TABLE `akun` (
-  `username` varchar(15) NOT NULL,
-  `password` varchar(12) NOT NULL,
-  `id_donatur` int(12) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `data_donatur`
+-- Struktur dari tabel `data_donatur`
 --
 
 CREATE TABLE `data_donatur` (
-  `id_donatur` int(3) NOT NULL,
   `Nama` varchar(20) NOT NULL,
   `jenis_kelamin` enum('laki-laki','perempuan') NOT NULL,
   `No_Telp` varchar(12) NOT NULL,
   `surel` varchar(30) NOT NULL,
-  `No_Rekening` int(10) NOT NULL,
-  `pekerjaan` varchar(20) NOT NULL,
-  `Alamat` varchar(20) NOT NULL,
-  `kabupaten` varchar(20) NOT NULL,
-  `provinsi` varchar(20) NOT NULL,
-  `kode_pos` int(6) NOT NULL
+  `No_Rekening` varchar(20) NOT NULL,
+  `jumlah_donasi` int(15) NOT NULL,
+  `Tujuan_Berbagi` enum('Sedekah','Zakat','Duafa') NOT NULL,
+  `jenis_pembayaran` enum('Gopay','Paypal','Transfer','Indomaret') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `data_donatur`
+--
+
+INSERT INTO `data_donatur` (`Nama`, `jenis_kelamin`, `No_Telp`, `surel`, `No_Rekening`, `jumlah_donasi`, `Tujuan_Berbagi`, `jenis_pembayaran`) VALUES
+('Fahmi Rizal', 'laki-laki', '089632423233', 'rizalfahmi10@gmail.com', '0340202323023242', 1000000, 'Sedekah', 'Transfer'),
+('Ajeng Nurrahmah', 'perempuan', '081232140932', 'ajengnurahmah12@gmail.com', '0492019202', 1000000, 'Sedekah', 'Paypal'),
+('Andi Iswandi', 'laki-laki', '085734092898', 'andiiswandi@gmail.com', '0530239089', 400000, 'Sedekah', 'Paypal'),
+('Cahaya Qurani', 'perempuan', '08572131210', 'cahayaqurani23@gmail.com', '0540230323', 50000, 'Zakat', 'Paypal'),
+('Retno Eka', 'perempuan', '085768382387', 'retnoka656@gamail.com', '0700239293200', 900000, 'Duafa', 'Transfer'),
+('Gusdi Yamin', 'laki-laki', '082367673424', 'gusdiyamin@gmail.com', '0792387438', 150000, 'Zakat', 'Gopay'),
+('Farhan Zule', 'laki-laki', '089611023912', 'zulfarhan599@gmail.com', '130-00-2121373', 200000, 'Zakat', 'Gopay'),
+('Iwan Gustiawan', 'laki-laki', '082389812839', 'gustiawan20@gmail.com', '130-10-204234', 750000, 'Sedekah', 'Paypal'),
+('Novrianti', 'perempuan', '083989393398', 'novrianti22@gmail.com', '131-00-2132142', 75000, 'Zakat', 'Transfer'),
+('Felicia Amel', 'perempuan', '085789302398', 'feliciamel@gmail.com', '7319489399', 100000, 'Duafa', 'Transfer');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `akun`
---
-ALTER TABLE `akun`
-  ADD PRIMARY KEY (`username`),
-  ADD KEY `id_donatur` (`id_donatur`);
-
---
--- Indexes for table `data_donatur`
+-- Indeks untuk tabel `data_donatur`
 --
 ALTER TABLE `data_donatur`
-  ADD PRIMARY KEY (`id_donatur`),
-  ADD KEY `No_Rekening` (`No_Rekening`);
+  ADD PRIMARY KEY (`No_Rekening`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
